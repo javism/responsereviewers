@@ -1,0 +1,106 @@
+% Copyright Javier Sánchez-Monedero.
+% Please report bugs and suggestions to (jsanchezm at uco.es)
+%
+% This document is released under a Creative Commons Licence 
+% CC-BY-SA (http://creativecommons.org/licenses/by-sa/3.0/) 
+%
+% BASIC INSTRUCTIONS: 
+% 1. Load and set up proper language packages
+% 2. Complete the paper data commands
+% 3. Use commands \rcomment and \newtext as shown in the example
+
+\documentclass[a4paper,twoside,11pt]{reviewresponse}
+
+% 1. Load and set up proper language packages
+%\usepackage[utf8x]{inputenc}
+\usepackage[latin9]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+
+% 2. Complete the paper data
+\newcommand{\myAuthors}{{John.~Doe$^{\displaystyle 1}$, ~Foo~B.~Bar$^{\displaystyle 2}$, } \\ {~Peter Sanchez$^{\displaystyle 2}$}}
+\newcommand{\myAuthorsShort}{John.~Doe et. al}
+\newcommand{\myEmail}{john@uco.es}
+\newcommand{\myTitle}{My Submited Paper Tittle}
+\newcommand{\myShortTitle}{Response to reviewers}
+\newcommand{\myJournal}{Journal Name}
+\newcommand{\myDept}{{$^{\displaystyle 1}$Department of Computer Science and Numerical Analysis, University of C\'{o}rdoba, C\'{o}rdoba 14074, Spain. \\ \url{http://www.uco.es/ayrna/}}\\
+{$^{\displaystyle 2}$School of Computer Science, The University of XXX. }\\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\usepackage[linktoc=all]{hyperref}
+\usepackage[linktoc=all,bookmarks,bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+
+\hypersetup{
+pdfauthor = {\myAuthorsShort},
+pdftitle = {\myTitle},
+pdfsubject = {\myJournal\xspace},
+colorlinks = true,
+linkcolor=black!70!green,          % color of internal links
+citecolor=black!70!green,        % color of links to bibliography
+filecolor=magenta,      % color of file links
+urlcolor=black!70!green           % color of external links
+}
+
+\begin{document}
+
+\thispagestyle{plain}
+
+\begin{center}
+ {\LARGE\myTitle} \vspace{0.5cm} \\
+ {\large\myJournal} \vspace{0.5cm} \\
+ \today \vspace{0.5cm} \\
+ \myAuthors \\
+ \url{\myEmail} \vspace{1cm} \\
+ \myDept
+\end{center}
+
+\tableofcontents
+
+\begin{abstract}
+ We thank the anonymous Reviewers for their efforts and feedback.
+\end{abstract}
+
+\section{Reviewer 1}
+
+\rcomment{
+This work proposed a new method to address...
+}
+
+\textbf{Response}
+
+We thank the Reviewer for the positive comments about our work and manuscript. Below, we address every comment carefully and explain the corresponding changes in the manuscript.
+
+\rcomment{
+Nevertheless, I personally do not agree with some of the views of the authors...
+}
+
+\textbf{Response}
+
+We thank the reviewer for this comment and we agree with him/her. We have rewritten the paragraph following his/her comments:  
+
+\begin{quotation}\noindent
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an \newtext{unknown printer} took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s \newtext{the release of Letraset sheets containing Lorem Ipsum passages}, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+\end{quotation} 
+
+\clearpage
+
+\section{Reviewer 2}
+
+\rcomment
+{
+I would like to see a few add ons to substantiate the approach in particular regarding its limits...
+}
+
+\textbf{Response}
+
+We want to thank the reviewer for this comment. In order to satisfy this petition we have added a new Subsection...
+
+% Uncomment in case references are needed
+%\bibliographystyle{apalike}
+%\bibliography{responsereferences}
+
+
+\end{document}
